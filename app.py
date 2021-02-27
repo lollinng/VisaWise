@@ -12,9 +12,9 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/ml')
+@app.route('/predict')
 def indexp():
-    return render_template('ml.html')
+    return render_template('predict.html')
 
 
 @app.route('/y_predict', methods=['POST'])
@@ -35,7 +35,7 @@ def y_predict():
         output = "Certified"
     else:
         output = "denied"
-    return render_template('ml.html', prediction_text='   {}'.format(output))
+    return render_template('predict.html', prediction_text='   {}'.format(output))
 
 
 if __name__ == "__main__":
